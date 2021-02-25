@@ -149,7 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Bush
+    name: <name>
     sentences:
-    - This is a bush.
-    - Not much to see here.
+    - Sample dialogue
