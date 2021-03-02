@@ -65,6 +65,7 @@ public class InteractionHandle : MonoBehaviour
         }
     }
 
+    // Checks which interactions are expected to occur and if the proper references are present.
     void PreInteraction()
     {
         if (InitiatesDialogue && DialogueEvent)
