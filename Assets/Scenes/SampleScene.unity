@@ -549,6 +549,10 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[0]
       value: This is a bush
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: Repeatable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: Interactable
