@@ -13353,6 +13353,9 @@ MonoBehaviour:
   nameText: {fileID: 559739807}
   dialogueText: {fileID: 1336461540}
   dialogueBox: {fileID: 313433127}
+  expectsPlayer: 1
+  typingInProgress: 0
+  progressionOcurred: 1
 --- !u!4 &1802099167
 Transform:
   m_ObjectHideFlags: 0
@@ -13555,15 +13558,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Nothing to see here
+      value: Nothing to see hereNothing to see hereNothing to see hereNothing to
+        see hereNothing to see here
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: This is a bush
+      value: This is a bushThis is a bushThis is a bushThis is a bush
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: Repeatable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: typewriterSpeed
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name

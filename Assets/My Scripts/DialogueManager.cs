@@ -12,10 +12,14 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Image dialogueBox;
     public bool expectsPlayer = true;
+
     private Queue<string> sentences;
 
     private TopDownCharacterController playerController;
-    
+    public bool typingInProgress = false;
+    public bool progressionOcurred = true;
+    private string dialogueBlockTemp;
+
     void Awake()
     {
         if (expectsPlayer)
@@ -37,7 +41,7 @@ public class DialogueManager : MonoBehaviour
         else if (!visible)
             dialogueBox.transform.localPosition -= temp;
     }
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, float speed)
     {
         Debug.Log("Initiating dialogue with " + dialogue.name);
         SetDialogueBoxVisibility(true);
@@ -49,31 +53,51 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        DisplayNextSentence();
+        DisplayNextSentence(speed);
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(float typewriterSpeed)
     {
-        if (sentences.Count == 0)
+        if (sentences.Count == 0 && !typingInProgress)
         {
             EndDialogue();
+            progressionOcurred = true;
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        //string sentence = sentences.Dequeue();
         //dialogueText.text = sentence;
-        StopAllCoroutines(); // if there is already a typewriter running, it is stopped
-        StartCoroutine(Typewrite(sentence));
+        //StopAllCoroutines(); // if there is already a typewriter running, it is stopped
+        if (typingInProgress)
+        {
+            progressionOcurred = false;
+            StopAllCoroutines();
+            dialogueText.text = dialogueBlockTemp;
+            typingInProgress = false;
+        }
+        else
+        {
+            string sentence = sentences.Dequeue();
+            progressionOcurred = true;
+            StartCoroutine(Typewrite(sentence, typewriterSpeed));
+        }
+        
     }
 
-    IEnumerator Typewrite(string sentence)
+    IEnumerator Typewrite(string sentence, float speed)
     {
+        typingInProgress = true;
         dialogueText.text = "";
+        dialogueBlockTemp = sentence;
         foreach (var letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(speed);
+            
         }
+
+        typingInProgress = false;
+        Debug.Log("Finished coroutine");
     }
 
     void EndDialogue()
