@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
+using Cainos.PixelArtTopDown_Basic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,12 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    private TopDownCharacterController playerController;
+    
+    void Awake()
+    {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<TopDownCharacterController>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         SetDialogueBoxVisibility(false);
     }
 
-    void SetDialogueBoxVisibility(bool visible)
+    public void SetDialogueBoxVisibility(bool visible)
     {
         Vector3 temp = new Vector3(0.0f, 1000.0f, 0.0f);
         if (visible)
@@ -40,7 +47,6 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentence();
     }
 
@@ -53,7 +59,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        //Debug.Log(sentence);
         dialogueText.text = sentence;
     }
 

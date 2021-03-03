@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Cainos.PixelArtTopDown_Basic;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -13,6 +15,17 @@ public class InteractionHandle : MonoBehaviour
     public bool InitiatesDialogue;
 
     private bool PlayerInTrigger = false;
+
+    private DialogueManager dialogueManager;
+
+    public GameObject playerController;
+
+    void Awake()
+    {
+        dialogueManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DialogueManager>();
+        //playerController = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +54,9 @@ public class InteractionHandle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerInTrigger = false;
             Debug.Log("Player exited trigger of '" + gameObject.name + "'");
+            PlayerInTrigger = false;
+            
         }
     }
     
@@ -68,9 +82,26 @@ public class InteractionHandle : MonoBehaviour
     // Checks which interactions are expected to occur and if the proper references are present.
     void PreInteraction()
     {
+        // Dialogue
         if (InitiatesDialogue && DialogueEvent)
         {
+            SetPlayerMovement(false);
             DialogueEvent.TriggerDialogue();
+            if (DialogueEvent.DialogueFinished) // detect when the dialogue is over
+            {
+                SetPlayerMovement(true);
+            }
+        }
+        // Other (...)
+    }
+
+    void SetPlayerMovement(bool canMove)
+    {
+        if (!canMove && DialogueEvent.WillHaltMovement)
+            playerController.GetComponent<TopDownCharacterController>().enabled = false;
+        else
+        {
+            playerController.GetComponent<TopDownCharacterController>().enabled = true;
         }
     }
 }
