@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using Cainos.PixelArtTopDown_Basic;
@@ -10,14 +11,15 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Image dialogueBox;
-
+    public bool expectsPlayer = true;
     private Queue<string> sentences;
 
     private TopDownCharacterController playerController;
     
     void Awake()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<TopDownCharacterController>();
+        if (expectsPlayer)
+            playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<TopDownCharacterController>();
     }
     // Start is called before the first frame update
     void Start()
@@ -59,7 +61,19 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        //dialogueText.text = sentence;
+        StopAllCoroutines(); // if there is already a typewriter running, it is stopped
+        StartCoroutine(Typewrite(sentence));
+    }
+
+    IEnumerator Typewrite(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (var letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
     void EndDialogue()
