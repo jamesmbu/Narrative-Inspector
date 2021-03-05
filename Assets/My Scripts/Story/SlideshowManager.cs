@@ -12,15 +12,34 @@ public class SlideshowManager : MonoBehaviour
     [Tooltip("Reference to the UI element of type Image which displays the images of the slideshow")]
     public Image SlideshowImageUI;
 
+    private int currentImageIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         if (SlideshowImageUI)
         {
-            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[Random.Range(0,3)];
+            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex];
         }
     }
 
+    public void Next()
+    {
+        if (SlideshowImageUI)
+        {
+            Debug.Log("next");
+            currentImageIndex++;
+            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex];
+        }
+    }
+
+    public void Previous()
+    {
+        if (SlideshowImageUI)
+        {
+            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex--];
+        }
+    }
     // Update is called once per frame
     void Update()
     {

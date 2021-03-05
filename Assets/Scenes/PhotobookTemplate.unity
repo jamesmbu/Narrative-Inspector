@@ -286,6 +286,11 @@ MonoBehaviour:
     - Aliquam porta sit amet tellus in ornare.
     - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
     - Pellentesque id pulvinar est.
+  - name: person 2
+    sentences:
+    - Aliquam porta sit amet tellus in ornare.
+    - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
+    - Pellentesque id pulvinar est.
   typewriterSpeed: 0.02
   DialogueFinished: 0
   WillHaltMovement: 1

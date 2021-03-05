@@ -15,6 +15,7 @@ public class DialogueHandle : MonoBehaviour
     private DialogueManager dialogueManager;
     private bool MultiHandleMode = false;
     public Dialogue[] dialogueMultiHandle;
+    private SlideshowManager slideshowManager = null;
     [Range(0.0f, 0.1f)] public float typewriterSpeed = 0.02f;
 
     [HideInInspector]public bool DialogueFinished = false;
@@ -30,23 +31,20 @@ public class DialogueHandle : MonoBehaviour
         if (dialogueMultiHandle.Length > 0)
         {
             MultiHandleMode = true;
-            
         }
-        Debug.Log(MultiHandleMode);
     }
 
     void Start()
     {
         totalTextBlocks = dialogue.sentences.Length;
         dialogueManager = FindObjectOfType<DialogueManager>();
+        slideshowManager = FindObjectOfType<SlideshowManager>();
     }
 
     public void TriggerDialogue()
     {
         if (MultiHandleMode)
         {
-            
-                
                 if (progress == 0)
                 {
                     DialogueFinished = false;
@@ -64,16 +62,14 @@ public class DialogueHandle : MonoBehaviour
                         progress++;
                     }
                     if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
-                    && dialogueGroupTracker != dialogueMultiHandle.Length-1)
+                    && dialogueGroupTracker != dialogueMultiHandle.Length-1) // if at the end of a dialogue group
                     {
-                        Debug.Log("Tracker: " + dialogueGroupTracker);
-                        Debug.Log("Length: " + dialogueMultiHandle.Length);
                         dialogueGroupTracker++;
                         progress = 0;
                         DialogueFinished = true;
+                        slideshowManager.Next();
                         TriggerDialogue();
                     }
-                    Debug.Log(progress);
                 }
             
         }
