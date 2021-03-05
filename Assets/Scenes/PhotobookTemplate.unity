@@ -200,9 +200,11 @@ GameObject:
   - component: {fileID: 536508347}
   - component: {fileID: 536508346}
   - component: {fileID: 536508348}
+  - component: {fileID: 536508349}
+  - component: {fileID: 536508350}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,6 +225,8 @@ MonoBehaviour:
   dialogueText: {fileID: 4016646138322028319}
   dialogueBox: {fileID: 4016646138023125870}
   expectsPlayer: 0
+  typingInProgress: 0
+  progressionOcurred: 1
 --- !u!4 &536508347
 Transform:
   m_ObjectHideFlags: 0
@@ -254,6 +258,53 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e6ea775418fd8b440bd9e9b65d6bd553, type: 3}
   - {fileID: 21300000, guid: f91a25a9f52812f4b8ce18bacccc3d20, type: 3}
   SlideshowImageUI: {fileID: 476180721843378533}
+--- !u!114 &536508349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536508345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330979a4527e80f45beee24863ec4233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - dialogue 1
+    - dialogue 2
+    - dialogue 3
+  dialogueMultiHandle:
+  - name: person 1
+    sentences:
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - 'Nam a neque vel dolor cursus tincidunt. '
+  - name: person 2
+    sentences:
+    - Aliquam porta sit amet tellus in ornare.
+    - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
+    - Pellentesque id pulvinar est.
+  typewriterSpeed: 0.02
+  DialogueFinished: 0
+  WillHaltMovement: 1
+  Repeatable: 1
+--- !u!114 &536508350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536508345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f847980a6b6adb4a8cab45ddcfa4e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitiatesDialogue: 1
+  playerController: {fileID: 0}
+  NoTriggerRequired: 1
 --- !u!1 &1645753087
 GameObject:
   m_ObjectHideFlags: 0

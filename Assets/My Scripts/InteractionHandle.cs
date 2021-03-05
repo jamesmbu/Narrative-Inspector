@@ -18,7 +18,10 @@ public class InteractionHandle : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
-    public GameObject playerController;
+    public GameObject playerController = null;
+
+    [Tooltip("If true, interaction requires no trigger event")]
+    public bool NoTriggerRequired = false;
 
     void Awake()
     {
@@ -36,7 +39,7 @@ public class InteractionHandle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && PlayerInTrigger)
+        if (Input.GetKeyDown(KeyCode.E) && (PlayerInTrigger || NoTriggerRequired))
         {
             PreInteraction();
         }
@@ -62,13 +65,14 @@ public class InteractionHandle : MonoBehaviour
     
     void YieldComponents()
     {
-        TriggerBounds = GetComponent<CircleCollider2D>();
+        if (!NoTriggerRequired)
+            TriggerBounds = GetComponent<CircleCollider2D>();
         DialogueEvent = GetComponent<DialogueHandle>();
     }
 
     void ValidateComponentYields()
     {
-        if (!TriggerBounds)
+        if (!TriggerBounds && !NoTriggerRequired)
         {
             Debug.Log(gameObject.name + " has no trigger attached (Missing 'CircleCollider2D')");
         }
@@ -97,6 +101,8 @@ public class InteractionHandle : MonoBehaviour
 
     void SetPlayerMovement(bool canMove)
     {
+        if (NoTriggerRequired) return;
+
         if (!canMove && DialogueEvent.WillHaltMovement)
             playerController.GetComponent<TopDownCharacterController>().enabled = false;
         else

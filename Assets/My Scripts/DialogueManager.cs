@@ -16,8 +16,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
 
     private TopDownCharacterController playerController;
-    public bool typingInProgress = false;
-    public bool progressionOcurred = true;
+    [HideInInspector] public bool typingInProgress = false;
+    [HideInInspector] public bool progressionOcurred = true;
     private string dialogueBlockTemp;
 
     void Awake()
@@ -65,9 +65,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        //string sentence = sentences.Dequeue();
-        //dialogueText.text = sentence;
-        //StopAllCoroutines(); // if there is already a typewriter running, it is stopped
         if (typingInProgress)
         {
             progressionOcurred = false;

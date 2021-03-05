@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
+
 /*
  * Attach this component to a game object which is meant to present dialogue on interaction
 */
 public class DialogueHandle : MonoBehaviour
 {
     public Dialogue dialogue;
+    
     private int progress = 0;
     private int totalTextBlocks;
     private DialogueManager dialogueManager;
-
+    private bool MultiHandleMode = false;
+    public Dialogue[] dialogueMultiHandle;
     [Range(0.0f, 0.1f)] public float typewriterSpeed = 0.02f;
 
     [HideInInspector]public bool DialogueFinished = false;
@@ -20,6 +24,17 @@ public class DialogueHandle : MonoBehaviour
     [Tooltip("If true, the dialogue can be cycled through again ")]
     public bool Repeatable = true;
 
+    private int dialogueGroupTracker = 0;
+    void Awake()
+    {
+        if (dialogueMultiHandle.Length > 0)
+        {
+            MultiHandleMode = true;
+            
+        }
+        Debug.Log(MultiHandleMode);
+    }
+
     void Start()
     {
         totalTextBlocks = dialogue.sentences.Length;
@@ -28,37 +43,75 @@ public class DialogueHandle : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (progress == 0)
+        if (MultiHandleMode)
         {
-            DialogueFinished = false;
-            dialogueManager.StartDialogue(dialogue, typewriterSpeed);
             
-            if (dialogueManager.progressionOcurred)
-            {
-                progress++;
-            }
-
-            //Debug.Log(progress);
-
-        }
-        else
-        {
-            dialogueManager.DisplayNextSentence(typewriterSpeed);
-            if (dialogueManager.progressionOcurred)
-            {
-                progress++;
-            }
-            if (progress > totalTextBlocks)
-            {
-                DialogueFinished = true;
-                if (Repeatable)
+                
+                if (progress == 0)
                 {
-                    Debug.Log("Repeating!");
-                    progress = 0;
+                    DialogueFinished = false;
+                    dialogueManager.StartDialogue(dialogueMultiHandle[dialogueGroupTracker], typewriterSpeed);
+                    if (dialogueManager.progressionOcurred)
+                    {
+                        progress++;
+                    }
                 }
-            }
-            Debug.Log(progress);
+                else
+                {
+                    dialogueManager.DisplayNextSentence(typewriterSpeed);
+                    if (dialogueManager.progressionOcurred)
+                    {
+                        progress++;
+                    }
+                    if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
+                    && dialogueGroupTracker != dialogueMultiHandle.Length-1)
+                    {
+                        Debug.Log("Tracker: " + dialogueGroupTracker);
+                        Debug.Log("Length: " + dialogueMultiHandle.Length);
+                        dialogueGroupTracker++;
+                        progress = 0;
+                        DialogueFinished = true;
+                        TriggerDialogue();
+                    }
+                    Debug.Log(progress);
+                }
+            
         }
+        else if (!MultiHandleMode)
+        {
+            if (progress == 0)
+            {
+                DialogueFinished = false;
+                dialogueManager.StartDialogue(dialogue, typewriterSpeed);
+                if (dialogueManager.progressionOcurred)
+                {
+                    progress++;
+                }
+
+                //Debug.Log(progress);
+
+            }
+            else
+            {
+                dialogueManager.DisplayNextSentence(typewriterSpeed);
+                if (dialogueManager.progressionOcurred)
+                {
+                    progress++;
+                }
+                if (progress > totalTextBlocks)
+                {
+                    DialogueFinished = true;
+                    if (Repeatable)
+                    {
+                        Debug.Log("Repeating!");
+                        progress = 0;
+                    }
+                }
+                Debug.Log(progress);
+            }
+        }
+
+        
         
     }
 }

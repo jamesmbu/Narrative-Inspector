@@ -13558,12 +13558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Nothing to see hereNothing to see hereNothing to see hereNothing to
-        see hereNothing to see here
+      value: Nothing to see here
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: This is a bushThis is a bushThis is a bushThis is a bush
+      value: This is a bush
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: Repeatable
