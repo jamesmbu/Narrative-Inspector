@@ -26,7 +26,7 @@ public class InteractionHandle : MonoBehaviour
     void Awake()
     {
         dialogueManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DialogueManager>();
-        //playerController = GameObject.FindGameObjectWithTag("Player");
+        playerController = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Start is called before the first frame update

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8982011779923310352}
   m_Layer: 0
   m_Name: Interactable
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitiatesDialogue: 1
   playerController: {fileID: 0}
+  NoTriggerRequired: 0
 --- !u!114 &5143350769425623648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +133,8 @@ MonoBehaviour:
     name: <name>
     sentences:
     - Sample dialogue
+  dialogueMultiHandle: []
+  typewriterSpeed: 0.02
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 1
