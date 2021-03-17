@@ -24,6 +24,7 @@ public class SceneChanger : MonoBehaviour
     public void FadeToScene(int sceneIndex)
     {
         Animator.SetTrigger("FadeOut");
+        levelToLoad = sceneIndex;
     }
 
     public void OnFadeComplete()

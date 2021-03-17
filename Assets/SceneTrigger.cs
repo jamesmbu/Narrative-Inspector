@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneTrigger : MonoBehaviour
@@ -23,7 +24,7 @@ public class SceneTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Transition.FadeToScene(0);
+        Transition.FadeToScene(SceneToLoad);
     }
 
 }
