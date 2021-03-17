@@ -177,6 +177,8 @@ GameObject:
   - component: {fileID: 395558881}
   - component: {fileID: 395558880}
   - component: {fileID: 395558882}
+  - component: {fileID: 395558883}
+  - component: {fileID: 395558884}
   m_Layer: 0
   m_Name: Timeline Manager
   m_TagString: Untagged
@@ -207,6 +209,8 @@ PlayableDirector:
     value: {fileID: 1651254933}
   - key: {fileID: -6502359034139776695, guid: c6f7817408121d84e8693d07c7fca2cf, type: 2}
     value: {fileID: 1526762485}
+  - key: {fileID: -2846104472201758001, guid: c6f7817408121d84e8693d07c7fca2cf, type: 2}
+    value: {fileID: 395558883}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &395558881
@@ -249,7 +253,52 @@ MonoBehaviour:
   typewriterSpeed: 0.02
   DialogueFinished: 0
   WillHaltMovement: 1
-  Repeatable: 1
+  Repeatable: 0
+--- !u!114 &395558883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395558879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: aefd8b7c3c7a72b499c3356a9044214b, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 395558884}
+          m_TargetAssemblyTypeName: InteractionHandle, Assembly-CSharp
+          m_MethodName: PreInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &395558884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395558879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f847980a6b6adb4a8cab45ddcfa4e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitiatesDialogue: 1
+  playerController: {fileID: 0}
+  NoTriggerRequired: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
