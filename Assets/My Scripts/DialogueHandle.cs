@@ -67,7 +67,7 @@ public class DialogueHandle : MonoBehaviour
                         dialogueGroupTracker++;
                         progress = 0;
                         DialogueFinished = true;
-                        slideshowManager.Next();
+                        if (slideshowManager) slideshowManager.Next();
                         TriggerDialogue();
                     }
                 }
