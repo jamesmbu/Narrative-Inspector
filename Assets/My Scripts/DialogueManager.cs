@@ -94,12 +94,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         typingInProgress = false;
-        Debug.Log("Finished coroutine");
+        //Debug.Log("Finished coroutine");
     }
 
     void EndDialogue()
     {
-        Debug.Log("End of dialogue");
+       // Debug.Log("End of dialogue");
         SetDialogueBoxVisibility(false);
     }
 

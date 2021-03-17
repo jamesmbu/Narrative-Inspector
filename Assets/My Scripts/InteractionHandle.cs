@@ -50,14 +50,14 @@ public class InteractionHandle : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PlayerInTrigger = true;
-            Debug.Log("Player entered trigger of '" + gameObject.name + "'");
+            //Debug.Log("Player entered trigger of '" + gameObject.name + "'");
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player exited trigger of '" + gameObject.name + "'");
+            //Debug.Log("Player exited trigger of '" + gameObject.name + "'");
             PlayerInTrigger = false;
             
         }

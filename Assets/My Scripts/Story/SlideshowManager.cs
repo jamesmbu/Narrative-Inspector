@@ -27,7 +27,7 @@ public class SlideshowManager : MonoBehaviour
     {
         if (SlideshowImageUI)
         {
-            Debug.Log("next");
+            //Debug.Log("next");
             currentImageIndex++;
             SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex];
         }

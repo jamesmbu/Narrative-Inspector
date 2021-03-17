@@ -99,7 +99,7 @@ public class DialogueHandle : MonoBehaviour
                     DialogueFinished = true;
                     if (Repeatable)
                     {
-                        Debug.Log("Repeating!");
+                        //Debug.Log("Repeating!");
                         progress = 0;
                     }
                 }

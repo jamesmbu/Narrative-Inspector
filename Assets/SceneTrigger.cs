@@ -7,6 +7,8 @@ public class SceneTrigger : MonoBehaviour
 {
     public SceneChanger Transition;
 
+    public int SceneToLoad = 0;
+
     // Start is called before the first frame update
     void Start()
     {
