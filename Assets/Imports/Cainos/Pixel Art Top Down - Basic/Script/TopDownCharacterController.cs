@@ -9,10 +9,12 @@ namespace Cainos.PixelArtTopDown_Basic
         public float speed;
 
         private Animator animator;
+        private AudioSource footStepAudioSource;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
+            footStepAudioSource = GetComponent<AudioSource>();
         }
 
 
@@ -46,6 +48,11 @@ namespace Cainos.PixelArtTopDown_Basic
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
+        }
+
+        private void Footstep()
+        {
+            footStepAudioSource.Play();
         }
     }
 }

@@ -87,7 +87,7 @@ public class InteractionHandle : MonoBehaviour
     public void PreInteraction()
     {
         // Dialogue
-        if (InitiatesDialogue && DialogueEvent)
+        if (DialogueEvent)
         {
             SetPlayerMovement(false);
             DialogueEvent.TriggerDialogue();
