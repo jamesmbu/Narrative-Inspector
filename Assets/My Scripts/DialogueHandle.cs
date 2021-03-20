@@ -25,7 +25,7 @@ public class DialogueHandle : MonoBehaviour
     [Tooltip("If true, the dialogue can be cycled through again ")]
     public bool Repeatable = true;
 
-    private int dialogueGroupTracker = 0;
+    public int dialogueGroupTracker = 0;
     void Awake()
     {
         if (dialogueMultiHandle.Length > 0)
@@ -55,7 +55,12 @@ public void TriggerDialogue()
                     {
                         progress++;
                     }
-                }
+                    if (dialogueMultiHandle[dialogueGroupTracker].Audio)
+                    {
+                        AudioPlayer.clip = dialogueMultiHandle[dialogueGroupTracker].Audio;
+                        AudioPlayer.Play();
+                    }
+            }
                 else
                 {
                     dialogueManager.DisplayNextSentence(typewriterSpeed);
@@ -91,8 +96,6 @@ public void TriggerDialogue()
                     AudioPlayer.clip = dialogue.Audio;
                     AudioPlayer.Play();
                 }
-                //Debug.Log(progress);
-
             }
             else
             {
@@ -110,11 +113,8 @@ public void TriggerDialogue()
                         progress = 0;
                     }
                 }
-                Debug.Log(progress);
             }
         }
 
-        
-        
     }
 }

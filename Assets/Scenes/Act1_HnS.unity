@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77102693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 1.61, z: 0}
+  m_LocalPosition: {x: 2.04, y: 2.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1690517264}
@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: typewriterSpeed
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: dialogue.Audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f218de5d85be1f4fb1a620b6306fbd5, type: 3}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: Leaf pile
@@ -14695,6 +14699,102 @@ CapsuleCollider2D:
   m_Offset: {x: -0.3989012, y: -0.2552867}
   m_Size: {x: 20.432028, y: 10.171194}
   m_Direction: 1
+--- !u!82 &1138539078
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138539070}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.813
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1158681061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14855,6 +14955,10 @@ PrefabInstance:
       propertyPath: typewriterSpeed
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 5773307643395349593, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: SallyFootprints
@@ -14881,15 +14985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771138, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Offset.x
-      value: -1.3734274
+      value: -2.7703938
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771138, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Radius
-      value: 0.8691695
+      value: 1.1982841
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771138, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Offset.y
-      value: -1.6241181
+      value: -1.8659234
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771138, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Enabled
@@ -14983,8 +15087,7 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.9498482
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8982011779923310352, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
 --- !u!4 &1181969278 stripped
 Transform:
@@ -16581,6 +16684,10 @@ PrefabInstance:
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: typewriterSpeed
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773307643395349593, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
