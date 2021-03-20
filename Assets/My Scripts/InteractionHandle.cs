@@ -13,6 +13,8 @@ public class InteractionHandle : MonoBehaviour
 
     [Tooltip("Specify if this object will initiate a dialogue on interaction\n'DialogueHandle' component will be expected")]
     public bool InitiatesDialogue;
+    [Tooltip("If false, dialogue will be started by the scene director of the timeline manager")]
+    public bool PlayerControlsDialogue = true;
 
     private bool PlayerInTrigger = false;
 
@@ -39,7 +41,7 @@ public class InteractionHandle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && (PlayerInTrigger || NoTriggerRequired))
+        if (Input.GetKeyDown(KeyCode.E) && PlayerControlsDialogue && (PlayerInTrigger || NoTriggerRequired))
         {
             PreInteraction();
         }
@@ -89,6 +91,7 @@ public class InteractionHandle : MonoBehaviour
         // Dialogue
         if (DialogueEvent)
         {
+            PlayerControlsDialogue = true; //to allow for further dialogue to be player controlled
             SetPlayerMovement(false);
             DialogueEvent.TriggerDialogue();
             if (DialogueEvent.DialogueFinished) // detect when the dialogue is over

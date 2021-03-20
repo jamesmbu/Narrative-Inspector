@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[1]
       value: She isn't in here...
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: typewriterSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: Leaf pile
@@ -14847,6 +14851,10 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[20]
       value: These footprints look like Sally's size...
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: typewriterSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: SallyFootprints
@@ -16570,6 +16578,10 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[0]
       value: I don't think she turned into a dog...
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: typewriterSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: Paw Prints
@@ -17229,6 +17241,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: dialogueMultiHandle.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
       value: Bush
       objectReference: {fileID: 0}
@@ -17248,8 +17264,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: typewriterSpeed
-      value: 0.02
+      value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: dialogue.Audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f218de5d85be1f4fb1a620b6306fbd5, type: 3}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: Interactable

@@ -52,7 +52,8 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void Footstep()
         {
-            footStepAudioSource.Play();
+            if (footStepAudioSource)footStepAudioSource.Play();
         }
     }
 }
+ 

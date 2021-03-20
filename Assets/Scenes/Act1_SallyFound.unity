@@ -214,6 +214,10 @@ PlayableDirector:
     value: {fileID: 395558883}
   - key: {fileID: 2163444769057007603, guid: c6f7817408121d84e8693d07c7fca2cf, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 2642901022772295505, guid: c6f7817408121d84e8693d07c7fca2cf, type: 2}
+    value: {fileID: 1651254933}
+  - key: {fileID: 3746523134037116810, guid: c6f7817408121d84e8693d07c7fca2cf, type: 2}
+    value: {fileID: 1526762485}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &395558881
@@ -245,18 +249,22 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+    Audio: {fileID: 0}
   dialogueMultiHandle:
   - name: Jone
     sentences:
     - I found you!
+    Audio: {fileID: 0}
   - name: Sally
     sentences:
     - '!!!'
     - You always find me so quickly!
+    Audio: {fileID: 0}
   - name: Jone
     sentences:
     - And I always will
-  typewriterSpeed: 0.02
+    Audio: {fileID: 0}
+  typewriterSpeed: 0.03
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 0
@@ -303,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitiatesDialogue: 0
+  PlayerControlsDialogue: 0
   playerController: {fileID: 0}
   NoTriggerRequired: 1
 --- !u!114 &395558885

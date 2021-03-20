@@ -9,8 +9,8 @@ using UnityEngine.Analytics;
 public class DialogueHandle : MonoBehaviour
 {
     public Dialogue dialogue;
-    
-    private int progress = 0;
+    private AudioSource AudioPlayer;
+    public int progress = 0;
     private int totalTextBlocks;
     private DialogueManager dialogueManager;
     private bool MultiHandleMode = false;
@@ -38,10 +38,12 @@ public class DialogueHandle : MonoBehaviour
     {
         totalTextBlocks = dialogue.sentences.Length;
         dialogueManager = FindObjectOfType<DialogueManager>();
-        slideshowManager = FindObjectOfType<SlideshowManager>();
+        slideshowManager = FindObjectOfType<SlideshowManager>(); 
+        AudioPlayer = GetComponent<AudioSource>();
+
     }
 
-    public void TriggerDialogue()
+public void TriggerDialogue()
     {
         if (MultiHandleMode)
         {
@@ -76,7 +78,7 @@ public class DialogueHandle : MonoBehaviour
         else if (!MultiHandleMode)
         {
             if (progress == 0)
-            {
+            { 
                 DialogueFinished = false;
                 dialogueManager.StartDialogue(dialogue, typewriterSpeed);
                 if (dialogueManager.progressionOcurred)
@@ -84,6 +86,11 @@ public class DialogueHandle : MonoBehaviour
                     progress++;
                 }
 
+                if (dialogue.Audio)
+                {
+                    AudioPlayer.clip = dialogue.Audio;
+                    AudioPlayer.Play();
+                }
                 //Debug.Log(progress);
 
             }
