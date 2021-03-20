@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public bool typingInProgress = false;
     [HideInInspector] public bool progressionOcurred = true;
     private string dialogueBlockTemp;
+    private AudioSource AudioPlayer;
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        AudioPlayer = GetComponent<AudioSource>();
         ValidateTextUI();
         SetDialogueBoxVisibility(false);
     }
@@ -89,6 +91,7 @@ public class DialogueManager : MonoBehaviour
         foreach (var letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            AudioPlayer.Play();
             yield return new WaitForSeconds(speed);
             
         }
