@@ -123,7 +123,7 @@ public void TriggerDialogue()
 
                     
                 }
-                else if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+                else if (dialogue.TriggersEndScene && Transition)
                 {
                     Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
