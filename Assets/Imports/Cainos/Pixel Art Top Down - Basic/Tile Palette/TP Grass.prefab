@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8161540891825354774}
   - component: {fileID: 2868236613237066488}
+  - component: {fileID: 3345513842713183097}
   m_Layer: 31
   m_Name: TP Grass
   m_TagString: Untagged
@@ -44,6 +45,17 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!210 &3345513842713183097
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843343545590631724}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -2
 --- !u!1 &2493981774055160056
 GameObject:
   m_ObjectHideFlags: 0
