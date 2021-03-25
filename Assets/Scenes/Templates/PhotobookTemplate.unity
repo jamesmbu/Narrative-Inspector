@@ -276,25 +276,31 @@ MonoBehaviour:
     - dialogue 1
     - dialogue 2
     - dialogue 3
+    Audio: {fileID: 0}
+  progress: 0
   dialogueMultiHandle:
   - name: person 1
     sentences:
     - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     - 'Nam a neque vel dolor cursus tincidunt. '
+    Audio: {fileID: 0}
   - name: person 2
     sentences:
     - Aliquam porta sit amet tellus in ornare.
     - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
     - Pellentesque id pulvinar est.
+    Audio: {fileID: 0}
   - name: person 2
     sentences:
     - Aliquam porta sit amet tellus in ornare.
     - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
     - Pellentesque id pulvinar est.
+    Audio: {fileID: 0}
   typewriterSpeed: 0.02
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 1
+  dialogueGroupTracker: 0
 --- !u!114 &536508350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitiatesDialogue: 1
+  PlayerControlsDialogue: 1
   playerController: {fileID: 0}
   NoTriggerRequired: 1
 --- !u!1 &1645753087
@@ -447,6 +454,10 @@ PrefabInstance:
     - target: {fileID: 8151577656764533283, guid: 69d9d1d67356d2543bcf70f8d9a8df59, type: 3}
       propertyPath: m_Name
       value: SlideshowCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151577656764533283, guid: 69d9d1d67356d2543bcf70f8d9a8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151577656764533295, guid: 69d9d1d67356d2543bcf70f8d9a8df59, type: 3}
       propertyPath: m_LocalPosition.x

@@ -16,7 +16,7 @@ public class DialogueHandle : MonoBehaviour
     private bool MultiHandleMode = false;
     public Dialogue[] dialogueMultiHandle;
     private SlideshowManager slideshowManager = null;
-    [Range(0.0f, 0.1f)] public float typewriterSpeed = 0.02f;
+    [Range(0.0f, 0.1f)] public float typewriterSpeed = 0.03f;
 
     [HideInInspector]public bool DialogueFinished = false;
 
