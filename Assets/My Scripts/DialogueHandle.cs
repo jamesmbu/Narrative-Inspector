@@ -10,7 +10,7 @@ public class DialogueHandle : MonoBehaviour
 {
     public Dialogue dialogue;
     private AudioSource AudioPlayer;
-    public int progress = 0;
+    private int progress = 0;
     private int totalTextBlocks;
     private DialogueManager dialogueManager;
     private bool MultiHandleMode = false;
