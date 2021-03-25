@@ -12,4 +12,5 @@ public class Dialogue
     public string[] sentences;
 
     public AudioClip Audio;
+    public bool TriggersEndScene = false;
 }

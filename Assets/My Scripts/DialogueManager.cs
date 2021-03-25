@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue, float speed)
     {
-        Debug.Log("Initiating dialogue with " + dialogue.name);
+        //Debug.Log("Initiating dialogue with " + dialogue.name);
         SetDialogueBoxVisibility(true);
         nameText.text = dialogue.name;
 

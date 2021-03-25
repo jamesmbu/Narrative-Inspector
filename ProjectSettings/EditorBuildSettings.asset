@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act1_SallyFound.unity
     guid: 7d82cf5e790fd1d479dcc4fdb1e908d8
+  - enabled: 1
+    path: Assets/Scenes/Act1_IceCream.unity
+    guid: 0f7b0edb45a70a54b858e77148b00eb0
   m_configObjects: {}

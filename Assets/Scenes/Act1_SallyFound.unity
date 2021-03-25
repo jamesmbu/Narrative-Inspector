@@ -247,42 +247,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330979a4527e80f45beee24863ec4233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Transition: {fileID: 404926307}
   dialogue:
     name: 
     sentences: []
     Audio: {fileID: 0}
-  progress: 0
+    TriggersEndScene: 0
   dialogueMultiHandle:
   - name: Jone
     sentences:
     - I found you!
     Audio: {fileID: 0}
+    TriggersEndScene: 0
   - name: Sally
     sentences:
     - '!!!'
     - Not fair- You always find me so quickly!
     Audio: {fileID: 0}
+    TriggersEndScene: 0
   - name: Jone
     sentences:
     - And I always will
     Audio: {fileID: 8300000, guid: e294bd965cba65746bc2b32172b2dfbc, type: 3}
+    TriggersEndScene: 0
   - name: Sally
     sentences:
     - Ice cream, ice cream!
     Audio: {fileID: 0}
+    TriggersEndScene: 0
   - name: Jone
     sentences:
     - You want ice cream?
     Audio: {fileID: 0}
+    TriggersEndScene: 0
   - name: Sally
     sentences:
     - With extra sprinkles, please!
     Audio: {fileID: 0}
+    TriggersEndScene: 1
   typewriterSpeed: 0.03
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 0
-  dialogueGroupTracker: 0
 --- !u!114 &395558883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +443,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &404926307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1995916514765794338, guid: cd4af91d4fbbea043a09bf7193aef1a7, type: 3}
+  m_PrefabInstance: {fileID: 1700251678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82105464279c6254b92270b7b325a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14602,6 +14619,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.066577, y: 10.009711}
   m_EdgeRadius: 0
+--- !u!1 &2014693380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014693382}
+  - component: {fileID: 2014693381}
+  m_Layer: 0
+  m_Name: LevelProgressor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014693381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014693380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82105464279c6254b92270b7b325a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 0}
+  levelToLoad: 0
+--- !u!4 &2014693382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014693380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2789068, y: 0.2665623, z: -0.401565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053873752
 GameObject:
   m_ObjectHideFlags: 0

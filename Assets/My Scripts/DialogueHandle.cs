@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 /*
  * Attach this component to a game object which is meant to present dialogue on interaction
 */
 public class DialogueHandle : MonoBehaviour
 {
+    public SceneChanger Transition;
     public Dialogue dialogue;
     private AudioSource AudioPlayer;
     private int progress = 0;
@@ -25,7 +27,7 @@ public class DialogueHandle : MonoBehaviour
     [Tooltip("If true, the dialogue can be cycled through again ")]
     public bool Repeatable = true;
 
-    public int dialogueGroupTracker = 0;
+    private int dialogueGroupTracker = 0;
     void Awake()
     {
         if (dialogueMultiHandle.Length > 0)
@@ -60,7 +62,7 @@ public void TriggerDialogue()
                         AudioPlayer.clip = dialogueMultiHandle[dialogueGroupTracker].Audio;
                         AudioPlayer.Play();
                     }
-            }
+                }
                 else
                 {
                     dialogueManager.DisplayNextSentence(typewriterSpeed);
@@ -74,9 +76,15 @@ public void TriggerDialogue()
                         dialogueGroupTracker++;
                         progress = 0;
                         DialogueFinished = true;
+                        
                         if (slideshowManager) slideshowManager.Next();
                         TriggerDialogue();
                     }
+                    else if(dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+                    { 
+                        Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex+1);
+                    }
+                    
                 }
             
         }
@@ -112,6 +120,12 @@ public void TriggerDialogue()
                         //Debug.Log("Repeating!");
                         progress = 0;
                     }
+
+                    
+                }
+                else if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+                {
+                    Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
         }
