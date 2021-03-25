@@ -448,15 +448,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Pile of leaves
+      value: Jone (chalk outline)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: '*rustles*'
+      value: 'They found his body here...
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
@@ -469,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 0f218de5d85be1f4fb1a620b6306fbd5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771136, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Name
       value: ChalkLine
@@ -500,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.54
+      value: -8.38
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14819,7 +14821,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138539070}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -14978,15 +14980,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Sally's footprints
+      value: Jone (bloody footprints)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: These footprints look like Sally's size...
+      value: They dragged his body this way, I should check that out later...
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Let's see where these prints lead to
+      value: Wait, were they in their bare feet?
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
@@ -15118,11 +15120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.58
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.05
+      value: 7.81
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15130,19 +15132,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.23100565
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9729525
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_RootOrder
@@ -15158,7 +15160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -26.713
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalScale.x
@@ -15750,13 +15752,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound Director
       objectReference: {fileID: 0}
+    - target: {fileID: 8589690922089074826, guid: babd035f15ec50f44a5777cc7b723d4c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8589690922089074827, guid: babd035f15ec50f44a5777cc7b723d4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7327855
+      value: -16.93
       objectReference: {fileID: 0}
     - target: {fileID: 8589690922089074827, guid: babd035f15ec50f44a5777cc7b723d4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.108412
+      value: -6.58
       objectReference: {fileID: 0}
     - target: {fileID: 8589690922089074827, guid: babd035f15ec50f44a5777cc7b723d4c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16753,11 +16759,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Paw prints
+      value: Jone (broken phone)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: I don't think she turned into a dog...
+      value: We can examine the contents of his phone- once we get this working,
+        that is.
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: typewriterSpeed
@@ -16809,11 +16816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.106
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.418
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17483,7 +17490,7 @@ PrefabInstance:
       objectReference: {fileID: 1651254931}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogueMultiHandle.Array.size
@@ -17491,17 +17498,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Bush
+      value: Jone (wiretap device)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: 'Nothing to see here...
-
-'
+      value: He must've been expecting company...
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: '*rustles*'
+      value: You were wearing a wire?
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: Repeatable
@@ -17514,7 +17519,11 @@ PrefabInstance:
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.Audio
       value: 
-      objectReference: {fileID: 8300000, guid: 0f218de5d85be1f4fb1a620b6306fbd5, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: ... if this was the case, they must have figured it out.
+      objectReference: {fileID: 0}
     - target: {fileID: 5773307643395349593, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -17553,11 +17562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.12
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.178
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.z
