@@ -35,7 +35,7 @@ public class InteractionHandle : MonoBehaviour
     void Start()
     {
         YieldComponents();
-        ValidateComponentYields();
+        //ValidateComponentYields();
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 */
 public class DialogueHandle : MonoBehaviour
 {
+    public ObjectiveTracker ObjectiveTracker;
     public SceneChanger Transition;
     public Dialogue dialogue;
     private AudioSource AudioPlayer;
@@ -42,7 +43,7 @@ public class DialogueHandle : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         slideshowManager = FindObjectOfType<SlideshowManager>(); 
         AudioPlayer = GetComponent<AudioSource>();
-
+        ObjectiveTracker = FindObjectOfType<ObjectiveTracker>();
     }
 
 public void TriggerDialogue()
@@ -61,6 +62,12 @@ public void TriggerDialogue()
                     {
                         AudioPlayer.clip = dialogueMultiHandle[dialogueGroupTracker].Audio;
                         AudioPlayer.Play();
+                    }
+
+                    if (dialogueMultiHandle[dialogueGroupTracker].IsObjective)
+                    {
+                        dialogueMultiHandle[dialogueGroupTracker].IsObjective = false;
+                        ObjectiveTracker.TallyObjective();
                     }
                 }
                 else
@@ -104,6 +111,11 @@ public void TriggerDialogue()
                     AudioPlayer.clip = dialogue.Audio;
                     AudioPlayer.Play();
                 }
+                if (dialogue.IsObjective)
+                {
+                    dialogue.IsObjective = false;
+                    ObjectiveTracker.TallyObjective();
+                }
             }
             else
             {
@@ -120,8 +132,6 @@ public void TriggerDialogue()
                         //Debug.Log("Repeating!");
                         progress = 0;
                     }
-
-                    
                 }
                 else if (dialogue.TriggersEndScene && Transition)
                 {

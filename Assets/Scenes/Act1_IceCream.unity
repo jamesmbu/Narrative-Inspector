@@ -427,58 +427,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330979a4527e80f45beee24863ec4233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObjectiveTracker: {fileID: 0}
+  Transition: {fileID: 555151084}
   dialogue:
     name: 
     sentences: []
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   dialogueMultiHandle:
   - name: Sally
     sentences:
     - Thank you!
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Jone
     sentences:
     - Now, don't tell your mother
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Phone (work)
     sentences:
     - (ringing)
     - Jone, I am so sorry to call you on your day off; I know you're busy but...
     Audio: {fileID: 8300000, guid: 3567987cc1dfbcd42a1cf4f8cfe37696, type: 3}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Jone
     sentences:
     - ...
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Phone (work)
     sentences:
     - ... I am calling to inform you that your partner Jason has been found dead.
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Jone
     sentences:
     - What? How?
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Phone (work)
     sentences:
     - He was found in an alleywey dumpster just off Richmond - I can ping you the
       location.
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Jone
     sentences:
     - I'm with my daughter right now...
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Phone (work)
     sentences:
     - It would mean a lot for Jason's family if you were on the case.
     Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
   - name: Jone
     sentences:
     - ... okay, ping the address.
     Audio: {fileID: 0}
+    TriggersEndScene: 1
+    IsObjective: 0
   typewriterSpeed: 0.03
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 0
-  dialogueGroupTracker: 0
 --- !u!114 &395558883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,6 +824,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &555151084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1995916514765794338, guid: cd4af91d4fbbea043a09bf7193aef1a7, type: 3}
+  m_PrefabInstance: {fileID: 1700251678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82105464279c6254b92270b7b325a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &559739807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4016646137815601944, guid: 79fdf17fbb270b3459b16f098493db5b, type: 3}

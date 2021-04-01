@@ -13,4 +13,5 @@ public class Dialogue
 
     public AudioClip Audio;
     public bool TriggersEndScene = false;
+    public bool IsObjective = false;
 }
