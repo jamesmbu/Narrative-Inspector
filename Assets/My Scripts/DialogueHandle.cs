@@ -123,11 +123,7 @@ public void TriggerDialogue()
                     AudioPlayer.clip = dialogue.Audio;
                     AudioPlayer.Play();
                 }
-                if (dialogue.IsObjective)
-                {
-                    dialogue.IsObjective = false;
-                    ObjectiveTracker.TallyObjective();
-                }
+                
             }
             else
             {
@@ -139,6 +135,11 @@ public void TriggerDialogue()
                 if (progress > totalTextBlocks)
                 {
                     DialogueFinished = true;
+                    if (dialogue.IsObjective)
+                    {
+                        dialogue.IsObjective = false;
+                        ObjectiveTracker.TallyObjective();
+                    }
                     if (Repeatable)
                     {
                         //Debug.Log("Repeating!");
