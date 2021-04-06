@@ -255,9 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhotoBook:
-  - {fileID: 21300000, guid: 10662a325ce098943a55cc8d25661ac9, type: 3}
-  - {fileID: 21300000, guid: e6ea775418fd8b440bd9e9b65d6bd553, type: 3}
-  - {fileID: 21300000, guid: f91a25a9f52812f4b8ce18bacccc3d20, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 3a5213debf9d76a49b0a625f7dae9319, type: 3}
+  - {fileID: 21300000, guid: 4f4a5e88bd88b5f4b8c8bac82258e61f, type: 3}
   SlideshowImageUI: {fileID: 476180721843378533}
 --- !u!114 &536508349
 MonoBehaviour:
@@ -283,26 +283,52 @@ MonoBehaviour:
     TriggersEndScene: 0
     IsObjective: 0
   dialogueMultiHandle:
-  - name: person 1
+  - name: Jone
     sentences:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - 'Nam a neque vel dolor cursus tincidunt. '
+    - A message from an unknown number. Who is this..?
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0
-  - name: person 2
+  - name: Jone
     sentences:
-    - Aliquam porta sit amet tellus in ornare.
-    - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
-    - Pellentesque id pulvinar est.
+    - '[Opens phone]'
+    - A picture of my ex wife's house? What kind of joke is this.
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0
-  - name: person 2
+  - name: Jone
     sentences:
-    - Aliquam porta sit amet tellus in ornare.
-    - Integer hendrerit mauris eu est viverra, eu dictum lectus congue.
-    - Pellentesque id pulvinar est.
+    - Sally! No way!
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - '[ringing]'
+    Audio: {fileID: 8300000, guid: 3567987cc1dfbcd42a1cf4f8cfe37696, type: 3}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - Sally! No way!
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - Sally! No way!
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - Sally! No way!
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - Sally! No way!
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0

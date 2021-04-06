@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Templates/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Act1_HnS.unity
+    path: Assets/Scenes/Act1_1_HnS.unity
     guid: 3f97eab5b4722774aa78048bf27f3e42
   - enabled: 1
-    path: Assets/Scenes/Act1_SallyFound.unity
+    path: Assets/Scenes/Act1_2_SallyFound.unity
     guid: 7d82cf5e790fd1d479dcc4fdb1e908d8
   - enabled: 1
-    path: Assets/Scenes/Act1_IceCream.unity
+    path: Assets/Scenes/Act1_3_IceCream.unity
     guid: 0f7b0edb45a70a54b858e77148b00eb0
   - enabled: 1
-    path: Assets/Scenes/Act2_CrimeScene.unity
+    path: Assets/Scenes/Act2_1_CrimeScene.unity
     guid: bc8f5af12e231664581a2ca1a3f18fc0
   m_configObjects: {}
