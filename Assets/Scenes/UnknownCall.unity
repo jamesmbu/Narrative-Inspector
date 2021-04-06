@@ -746,6 +746,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7076781519490927, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+    - target: {fileID: 7076781519490927, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8443396
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076781519490927, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8999326
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076781519490927, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076781519490927, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 469112804851938412, guid: 36a22658da35d9541af4378926a0d117, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.0767508
@@ -793,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 469112804851938415, guid: 36a22658da35d9541af4378926a0d117, type: 3}
       propertyPath: m_Name
       value: UROrg
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548662774061233509, guid: 36a22658da35d9541af4378926a0d117, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -113
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a22658da35d9541af4378926a0d117, type: 3}
