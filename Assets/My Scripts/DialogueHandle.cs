@@ -28,7 +28,7 @@ public class DialogueHandle : MonoBehaviour
     [Tooltip("If true, the dialogue can be cycled through again ")]
     public bool Repeatable = true;
 
-    private int dialogueGroupTracker = 0;
+    public int dialogueGroupTracker = 0;
     void Awake()
     {
         if (dialogueMultiHandle.Length > 0)
@@ -58,7 +58,9 @@ public void TriggerDialogue()
                     {
                         progress++;
                     }
-                    if (dialogueMultiHandle[dialogueGroupTracker].Audio)
+
+                    
+                    if (dialogueMultiHandle[dialogueGroupTracker].Audio != null)
                     {
                         AudioPlayer.clip = dialogueMultiHandle[dialogueGroupTracker].Audio;
                         AudioPlayer.Play();
@@ -80,18 +82,30 @@ public void TriggerDialogue()
                     if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
                     && dialogueGroupTracker != dialogueMultiHandle.Length-1) // if at the end of a dialogue group
                     {
+                        if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+                        {
+                            Debug.Log("End 2");
+                            Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        }
                         dialogueGroupTracker++;
+                        Debug.Log("End");
                         progress = 0;
                         DialogueFinished = true;
                         
                         if (slideshowManager) slideshowManager.Next();
                         TriggerDialogue();
+                        
                     }
-                    else if(dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
-                    { 
-                        Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex+1);
+                    else if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
+                        && dialogueGroupTracker == dialogueMultiHandle.Length - 1) // if at the end of a dialogue group
+                    {
+                        if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+                        {
+                            Debug.Log("End 2");
+                            Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        }
                     }
-                    
+
                 }
             
         }

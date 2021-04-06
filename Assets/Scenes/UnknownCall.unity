@@ -189,7 +189,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &536508345
+--- !u!1 &343956304
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,75 +197,134 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 536508347}
-  - component: {fileID: 536508346}
-  - component: {fileID: 536508348}
-  - component: {fileID: 536508349}
-  - component: {fileID: 536508350}
-  - component: {fileID: 536508351}
+  - component: {fileID: 343956305}
+  - component: {fileID: 343956307}
+  - component: {fileID: 343956306}
+  - component: {fileID: 343956308}
   m_Layer: 0
-  m_Name: Manager
-  m_TagString: Manager
+  m_Name: DialogueHandle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &536508346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536508345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5393ba4895125f4fb2841f97c9fad9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 4016646138904263780}
-  dialogueText: {fileID: 4016646138322028319}
-  dialogueBox: {fileID: 4016646138023125870}
-  expectsPlayer: 0
-  typingInProgress: 0
-  progressionOcurred: 1
---- !u!4 &536508347
+--- !u!4 &343956305
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536508345}
+  m_GameObject: {fileID: 343956304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0076799244, y: -0.48158768, z: -15.027549}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 536508347}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &536508348
-MonoBehaviour:
+--- !u!82 &343956306
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536508345}
+  m_GameObject: {fileID: 343956304}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2297fd3914a9a694ab00770f1ed3e9ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PhotoBook:
-  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
-  - {fileID: 21300000, guid: 3a5213debf9d76a49b0a625f7dae9319, type: 3}
-  - {fileID: 21300000, guid: 4f4a5e88bd88b5f4b8c8bac82258e61f, type: 3}
-  SlideshowImageUI: {fileID: 476180721843378533}
---- !u!114 &536508349
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.582
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &343956307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536508345}
+  m_GameObject: {fileID: 343956304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 330979a4527e80f45beee24863ec4233, type: 3}
@@ -308,41 +367,119 @@ MonoBehaviour:
     Audio: {fileID: 8300000, guid: 3567987cc1dfbcd42a1cf4f8cfe37696, type: 3}
     TriggersEndScene: 0
     IsObjective: 0
-  - name: Jone
+  - name: UNKNOWN NUMBER
     sentences:
-    - Sally! No way!
+    - Detective Jone- do you like the pictures you've recieved?
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0
   - name: Jone
     sentences:
-    - Sally! No way!
+    - You sick ####. Don't you dare even touch a hair on her or I--
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Sally
+    sentences:
+    - '[screams]'
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - "Threats like that will only hurt your daughter\u2026 Sally, wasn\u2019t it?
+      Tell your dad that if he wants to see you again, he has to be a good boy."
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Sally
+    sentences:
+    - Daddy I'm scared!
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0
   - name: Jone
     sentences:
-    - Sally! No way!
+    - Sally, don't be afraid- I'm coming to get you!
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - This is touching...
     Audio: {fileID: 0}
     TriggersEndScene: 0
     IsObjective: 0
   - name: Jone
     sentences:
-    - Sally! No way!
+    - What do you want?
     Audio: {fileID: 0}
     TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - "You\u2019re working on the Jason murder case, right? I need you to destroy
+      that wiretap recording and any evidence that will lead to us\u2026"
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - You're asking me to cover up for you...
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - I am asking you to save your daughter's life.
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - ...
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - You will also need to frame someone.
+    - Phil Donavan - from a rival gang.
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - And how am I meant to do that?
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: UNKNOWN NUMBER
+    sentences:
+    - You'll be sent the murder weapon. Then I'm sure you know what to do from there
+    Audio: {fileID: 0}
+    TriggersEndScene: 0
+    IsObjective: 0
+  - name: Jone
+    sentences:
+    - And hey, is my ex wife okay?
+    - ...they already hung up.
+    - Damn it. This better be the last time...
+    Audio: {fileID: 0}
+    TriggersEndScene: 1
     IsObjective: 0
   typewriterSpeed: 0.02
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 1
---- !u!114 &536508350
+  dialogueGroupTracker: 0
+--- !u!114 &343956308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536508345}
+  m_GameObject: {fileID: 343956304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f847980a6b6adb4a8cab45ddcfa4e1a, type: 3}
@@ -352,6 +489,92 @@ MonoBehaviour:
   PlayerControlsDialogue: 1
   playerController: {fileID: 0}
   NoTriggerRequired: 1
+--- !u!1 &536508345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536508347}
+  - component: {fileID: 536508346}
+  - component: {fileID: 536508348}
+  - component: {fileID: 536508351}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &536508346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536508345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5393ba4895125f4fb2841f97c9fad9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 4016646138904263780}
+  dialogueText: {fileID: 4016646138322028319}
+  dialogueBox: {fileID: 4016646138023125870}
+  expectsPlayer: 0
+  typingInProgress: 0
+  progressionOcurred: 1
+--- !u!4 &536508347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536508345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0076799244, y: -0.48158768, z: -15.027549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 343956305}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536508348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536508345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2297fd3914a9a694ab00770f1ed3e9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhotoBook:
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 3a5213debf9d76a49b0a625f7dae9319, type: 3}
+  - {fileID: 21300000, guid: 4f4a5e88bd88b5f4b8c8bac82258e61f, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  - {fileID: 21300000, guid: 92d1711bc3e34f749a51f5cca38cda0b, type: 3}
+  SlideshowImageUI: {fileID: 476180721843378533}
 --- !u!82 &536508351
 AudioSource:
   m_ObjectHideFlags: 0

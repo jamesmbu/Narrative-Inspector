@@ -35,6 +35,7 @@ public class InteractionHandle : MonoBehaviour
     void Start()
     {
         YieldComponents();
+        
         //ValidateComponentYields();
     }
 
