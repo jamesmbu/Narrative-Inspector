@@ -53,42 +53,43 @@ public void TriggerDialogue()
                 if (progress == 0)
                 {
                     DialogueFinished = false;
+                    
+                    // Initiate dialogue
                     dialogueManager.StartDialogue(dialogueMultiHandle[dialogueGroupTracker], typewriterSpeed);
                     if (dialogueManager.progressionOcurred)
                     {
                         progress++;
                     }
 
-                    
+                    // Check if there is an associated audio. If so, play it.
                     if (dialogueMultiHandle[dialogueGroupTracker].Audio != null)
                     {
                         AudioPlayer.clip = dialogueMultiHandle[dialogueGroupTracker].Audio;
                         AudioPlayer.Play();
                     }
 
+                    // Check if this dialogue counts towards the objectives list. If so, tally it.
                     if (dialogueMultiHandle[dialogueGroupTracker].IsObjective)
                     {
                         dialogueMultiHandle[dialogueGroupTracker].IsObjective = false;
                         ObjectiveTracker.TallyObjective();
                     }
                 }
+                // If a block of dialogue has already been started i.e., it is in progress...
                 else
                 {
+                    // Display the next sentence of the sequence, increment the progress tracker
                     dialogueManager.DisplayNextSentence(typewriterSpeed);
                     if (dialogueManager.progressionOcurred)
                     {
                         progress++;
                     }
-                    if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
-                    && dialogueGroupTracker != dialogueMultiHandle.Length-1) // if at the end of a dialogue group
+                    // If at the end of a dialogue group, but not the final dialogue group of the sequence...
+                    if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length 
+                        && dialogueGroupTracker != dialogueMultiHandle.Length-1) 
                     {
-                        if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
-                        {
-                            Debug.Log("End 2");
-                            Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
-                        }
+                        CheckEndSceneHandle();
                         dialogueGroupTracker++;
-                        Debug.Log("End");
                         progress = 0;
                         DialogueFinished = true;
                         
@@ -96,14 +97,11 @@ public void TriggerDialogue()
                         TriggerDialogue();
                         
                     }
+                    // If at the end of the final dialogue group
                     else if (progress > dialogueMultiHandle[dialogueGroupTracker].sentences.Length
                         && dialogueGroupTracker == dialogueMultiHandle.Length - 1) // if at the end of a dialogue group
                     {
-                        if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
-                        {
-                            Debug.Log("End 2");
-                            Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
-                        }
+                        CheckEndSceneHandle();
                     }
 
                 }
@@ -154,5 +152,13 @@ public void TriggerDialogue()
             }
         }
 
+        // Function to check if a dialogue group is a direct precursor to a scene transition. If so, the transition is handled
+        void CheckEndSceneHandle()
+        {
+            if (dialogueMultiHandle[dialogueGroupTracker].TriggersEndScene && Transition)
+            {
+                Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
     }
 }
