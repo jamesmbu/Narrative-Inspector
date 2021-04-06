@@ -15376,6 +15376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452336451}
   - component: {fileID: 1452336450}
+  - component: {fileID: 1452336452}
   m_Layer: 0
   m_Name: ProgressionTracker
   m_TagString: Untagged
@@ -15411,6 +15412,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452336452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452336449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82105464279c6254b92270b7b325a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 9041247105571257271}
+  levelToLoad: 5
 --- !u!1001 &1463218309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17061,6 +17076,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1651254938}
+    - target: {fileID: 9041247107087823696, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
+      propertyPath: levelToLoad
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9041247107182241820, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.2953615
@@ -17111,6 +17130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
+--- !u!95 &9041247105571257271 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9041247107087823701, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
+  m_PrefabInstance: {fileID: 9041247105571257270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9149324293353826956
 PrefabInstance:
   m_ObjectHideFlags: 0

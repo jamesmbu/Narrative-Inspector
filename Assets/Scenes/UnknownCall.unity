@@ -468,7 +468,7 @@ MonoBehaviour:
     Audio: {fileID: 0}
     TriggersEndScene: 1
     IsObjective: 0
-  typewriterSpeed: 0.02
+  typewriterSpeed: 0.03
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 1
