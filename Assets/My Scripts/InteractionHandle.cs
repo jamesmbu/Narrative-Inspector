@@ -9,16 +9,21 @@ public class InteractionHandle : MonoBehaviour
 {
 
     private CircleCollider2D TriggerBounds;
-    private DialogueHandle DialogueEvent;
 
+    /* Appearance ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    [Tooltip("Specify if this object's sprite changes on interaction\n'SpriteChangeHandle' component will be expected")]
+    public bool SpriteChangesOnInteraction;
+    private SpriteChangeHandle spriteChangeHandle;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /* Dialogue ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     [Tooltip("Specify if this object will initiate a dialogue on interaction\n'DialogueHandle' component will be expected")]
     public bool InitiatesDialogue;
+    private DialogueManager dialogueManager;
+    private DialogueHandle DialogueEvent;
     [Tooltip("If false, dialogue will be started by the scene director of the timeline manager")]
     public bool PlayerControlsDialogue = true;
-
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private bool PlayerInTrigger = false;
-
-    private DialogueManager dialogueManager;
 
     public GameObject playerController = null;
 
@@ -71,6 +76,10 @@ public class InteractionHandle : MonoBehaviour
         if (!NoTriggerRequired)
             TriggerBounds = GetComponent<CircleCollider2D>();
         DialogueEvent = GetComponent<DialogueHandle>();
+        if (SpriteChangesOnInteraction)
+        {
+            spriteChangeHandle = GetComponent<SpriteChangeHandle>();
+        }
     }
 
     void ValidateComponentYields()
@@ -89,6 +98,10 @@ public class InteractionHandle : MonoBehaviour
     // Checks which interactions are expected to occur and if the proper references are present.
     public void PreInteraction()
     {
+        if (SpriteChangesOnInteraction)
+        {
+            spriteChangeHandle.UpdateSprite();
+        }
         // Dialogue
         if (DialogueEvent)
         {
@@ -101,6 +114,7 @@ public class InteractionHandle : MonoBehaviour
             }
         }
         // Other (...)
+        
     }
 
     void SetPlayerMovement(bool canMove)
