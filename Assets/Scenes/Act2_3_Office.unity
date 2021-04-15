@@ -564,8 +564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageArray:
-  - {fileID: 0}
   - {fileID: 21300000, guid: e513c789adb58c74ab9c4d5914a10cd0, type: 3}
+  Loops: 0
 --- !u!4 &559174378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8851298018702771139, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
@@ -691,6 +691,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.2159577, y: -0.4201145}
   m_Size: {x: 29.019197, y: 22.1}
   m_Direction: 1
+--- !u!114 &688628941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688628935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3314ba5df75144b9aa915effbba5c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageArray:
+  - {fileID: 21300000, guid: 5ee34285c6b37174ab986907c2b15358, type: 3}
+  Loops: 0
 --- !u!1 &738697899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1277,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155060655}
     m_Modifications:
+    - target: {fileID: 1814160028162416533, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: SpriteChangesOnInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4693159010417323470, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.21
@@ -1308,15 +1327,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Jone (bloody footprints)
+      value: Jone
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: They dragged his body this way, I should check that out later...
+      value: '[plants false evidence]'
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Wait, were they in their bare feet?
+      value: Sorry, Phil Donavan. Whoever you are.
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
@@ -1413,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: 8851298018702771137, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5ee34285c6b37174ab986907c2b15358, type: 3}
+      objectReference: {fileID: 21300000, guid: 6bf70c9625c79d347a8a4b68ed1aaaff, type: 3}
     - target: {fileID: 8851298018702771137, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1432,7 +1451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771137, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8851298018702771138, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_Offset.x
@@ -2946,6 +2965,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1651254931}
+    - target: {fileID: 1814160028162416533, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
+      propertyPath: SpriteChangesOnInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4693159010417323470, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -2968,7 +2991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogueMultiHandle.Array.size
@@ -2980,11 +3003,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: He must've been expecting company...
+      value: I can't believe I have to do this...
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: You were wearing a wire?
+      value: '[smashes device]'
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: Repeatable
@@ -3000,7 +3023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: ... if this was the case, they must have figured it out.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.IsObjective

@@ -472,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Pile of leaves
+      value: ' Jone (Pile of leaves)'
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -14966,7 +14966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Sally's footprints
+      value: Jone (Sally's footprints)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -16775,7 +16775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Paw prints
+      value: Jone (Paw prints)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -17465,7 +17465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.name
-      value: Bush
+      value: Jone (Bush)
       objectReference: {fileID: 0}
     - target: {fileID: 5143350769425623648, guid: b4b98c53d4ffd6d40b4e4bf04e1049fb, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]

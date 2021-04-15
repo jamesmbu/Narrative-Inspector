@@ -15425,7 +15425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 9041247105571257271}
-  levelToLoad: 5
+  levelToLoad: 4
 --- !u!1001 &1463218309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17039,7 +17039,7 @@ PrefabInstance:
       objectReference: {fileID: 1651254938}
     - target: {fileID: 9041247107087823696, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
       propertyPath: levelToLoad
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9041247107182241820, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
       propertyPath: m_LocalPosition.x
