@@ -24,7 +24,7 @@ public class SceneTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Transition.FadeToScene(SceneToLoad);
+        Transition.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }

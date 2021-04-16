@@ -98,6 +98,7 @@ public class InteractionHandle : MonoBehaviour
     // Checks which interactions are expected to occur and if the proper references are present.
     public void PreInteraction()
     {
+        // Sprite Changing
         if (SpriteChangesOnInteraction)
         {
             spriteChangeHandle.UpdateSprite();
@@ -107,13 +108,12 @@ public class InteractionHandle : MonoBehaviour
         {
             PlayerControlsDialogue = true; //to allow for further dialogue to be player controlled
             SetPlayerMovement(false);
-            DialogueEvent.TriggerDialogue();
+            DialogueEvent.TriggerDialogue(); // Dialogue Handle interaction to invoke dialogue
             if (DialogueEvent.DialogueFinished) // detect when the dialogue is over
             {
                 SetPlayerMovement(true);
             }
         }
-        // Other (...)
         
     }
 
@@ -122,7 +122,11 @@ public class InteractionHandle : MonoBehaviour
         if (NoTriggerRequired) return;
 
         if (!canMove && DialogueEvent.WillHaltMovement)
+        {
+            playerController.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             playerController.GetComponent<TopDownCharacterController>().enabled = false;
+        }
+            
         else
         {
             playerController.GetComponent<TopDownCharacterController>().enabled = true;

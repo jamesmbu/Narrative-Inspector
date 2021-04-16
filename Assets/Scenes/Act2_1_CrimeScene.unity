@@ -15419,7 +15419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452336449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82105464279c6254b92270b7b325a23a, type: 3}
   m_Name: 
@@ -17040,6 +17040,10 @@ PrefabInstance:
     - target: {fileID: 9041247107087823696, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
       propertyPath: levelToLoad
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041247107087823696, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9041247107182241820, guid: 2bfbba97a39ff38458d2e647fb9fe0d3, type: 3}
       propertyPath: m_LocalPosition.x
