@@ -50,6 +50,7 @@ public void TriggerDialogue()
     {
         if (MultiHandleMode)
         {
+                // if the dialogue is starting from the beginning
                 if (progress == 0)
                 {
                     DialogueFinished = false;
@@ -92,7 +93,6 @@ public void TriggerDialogue()
                         dialogueGroupTracker++;
                         progress = 0;
                         DialogueFinished = true;
-                        
                         if (slideshowManager) slideshowManager.Next();
                         TriggerDialogue();
                         
@@ -103,7 +103,6 @@ public void TriggerDialogue()
                     {
                         CheckEndSceneHandle();
                     }
-
                 }
             
         }
