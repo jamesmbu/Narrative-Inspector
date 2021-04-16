@@ -502,6 +502,7 @@ MonoBehaviour:
   DialogueFinished: 0
   WillHaltMovement: 1
   Repeatable: 0
+  dialogueGroupTracker: 0
 --- !u!114 &395558883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f847980a6b6adb4a8cab45ddcfa4e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpriteChangesOnInteraction: 0
   InitiatesDialogue: 0
   PlayerControlsDialogue: 0
   playerController: {fileID: 0}
@@ -572,7 +574,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.786
+  m_Volume: 0.322
   m_Pitch: 1
   Loop: 0
   Mute: 0
