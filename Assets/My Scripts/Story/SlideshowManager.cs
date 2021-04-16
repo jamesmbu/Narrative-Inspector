@@ -26,7 +26,6 @@ public class SlideshowManager : MonoBehaviour
     {
         if (SlideshowImageUI)
         {
-            //Debug.Log("next");
             currentImageIndex++;
             SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex];
         }
@@ -36,12 +35,8 @@ public class SlideshowManager : MonoBehaviour
     {
         if (SlideshowImageUI)
         {
-            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex--];
+            currentImageIndex--;
+            SlideshowImageUI.GetComponent<Image>().sprite = PhotoBook[currentImageIndex];
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

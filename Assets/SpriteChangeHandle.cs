@@ -31,12 +31,6 @@ public class SpriteChangeHandle : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateSprite()
     {
         // goes to next available sprite
@@ -47,19 +41,10 @@ public class SpriteChangeHandle : MonoBehaviour
             
         }
         // if at end of the array, cycles back to beginning
-        else
+        else if (Loops)
         {
-            if (Loops)
-            {
-                spriteRenderer.sprite = programImageArray[0];
-                tracker = 0;
-            }
-            else
-            {
-                //spriteRenderer.sprite = programImageArray[0];
-            }
-            
+            spriteRenderer.sprite = programImageArray[0];
+            tracker = 0;
         }
-        
     }
 }
